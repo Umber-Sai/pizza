@@ -60,9 +60,10 @@ export class AppComponent {
     target.scrollIntoView({behavior: "smooth"});
   }
 
-  public addToCart(product: ProductType, target: HTMLElement): void {
+  public addToCart(title: string, target: HTMLElement): void {
     this.scrollTo(target);
-    this.formValues.productTitle = product.title;
+    this.formValues.productTitle = title;
+    this.products = this.products.filter(item => item.title.toUpperCase() !== title.toUpperCase());
   }
 
   public createOrder(): void {

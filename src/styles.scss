@@ -29,6 +29,21 @@ body {
     margin: 0 auto;
 }
 
+.btn {
+    background-color: rgb(255, 175, 24);
+    width: 224px;
+    height: 60px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    padding: 22px;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    font-family: "MullerBold";
+    color: rgb(56, 36, 0);
+}
+
 @media screen and (max-width: 1229px) {
     .container {
         padding: 0 15px;

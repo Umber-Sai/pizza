@@ -75,25 +75,13 @@
 <section class="products" #productsElement>
   <div class="container">
       <h2 class="products-title" id="product-title">Выберите свою любимую пиццу </h2>
-
       <div class="products-items">
-          <div class="product" *ngFor="let product of products">
-              <div class="product-image">
-                  <img [src]="'assets/images/' + product.image" alt="product-pizza">
-              </div>
-              <div class="product-title">{{product.title}}</div>
-              <div class="product-text">
-                {{product.description}}
-              </div>
-              <div class="product-action">
-                  <button class="btn btn-add-to-cart" (click)="addToCart(product, order)">В корзину</button>
-              </div>
-          </div>
+          <product *ngFor="let product of products; let i = index;" [product]="product" (addToCardEvent)="addToCart($event, orderElement)"></product>
       </div>
   </div>
 </section>
 
-<section class="order" #order>
+<section class="order" #orderElement>
   <div class="container">
       <div class="order-text">
           <div class="order-text-title double-title">
