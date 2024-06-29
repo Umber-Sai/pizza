@@ -8,7 +8,7 @@ import { TitleComponent } from '../title/title.component';
   styleUrls: ['./product.component.scss'],
   // encapsulation: ViewEncapsulation.None
 })
-export class ProductComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy{
+export class ProductComponent  {
 
   @Input() product: ProductType = {} as ProductType;
 
@@ -35,40 +35,6 @@ export class ProductComponent implements OnInit, OnChanges, DoCheck, AfterConten
       description: '',
     }
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges', changes);
-  }
-
-  ngOnInit(): void {
-    console.log('ngOnInit')
-  }
-
-  ngDoCheck(): void {
-    console.log('ngDoCheck')
-  }
-
-  ngAfterContentInit():void {
-    console.log('ngAfterContentInit')
-  }
-
-  ngAfterContentChecked():void {
-    console.log('ngAfterContentChecked')
-  }
-
-  ngAfterViewInit() {
-    console.log('ngAfterViewInit', this.elem)
-  }
-
-  ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked')
-  }
-
-  ngOnDestroy(): void {
-    console.log('ngOnDestroy-------------------------');
-  }
-
-
 
   addProductToCart() {
     this.addToCardEvent.emit(this.titleComponent.toUpper());

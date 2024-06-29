@@ -5,21 +5,11 @@ import { Component, ContentChild, ElementRef, Input, OnInit } from '@angular/cor
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss']
 })
-export class TitleComponent implements OnInit {
+export class TitleComponent  {
 
   @Input() title: string = '' as string;
 
-  @ContentChild('second')
-  private second!: ElementRef;
-
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  ngAfterViewInit() {
-    // console.log(this.second)
-  }
 
   toUpper() {
     return this.title.toUpperCase();

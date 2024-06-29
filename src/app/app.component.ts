@@ -14,7 +14,7 @@ export class AppComponent {
       description: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус чили, ананасы',
     },
     {
-      image: '2.png',
+      image: '',
       title: 'Морская Премиум',
       description: 'Перец, сыр, креветки, кальмары, мидии, лосось',
     },
@@ -63,7 +63,6 @@ export class AppComponent {
   public addToCart(title: string, target: HTMLElement): void {
     this.scrollTo(target);
     this.formValues.productTitle = title;
-    this.products = this.products.filter(item => item.title.toUpperCase() !== title.toUpperCase());
   }
 
   public createOrder(): void {
