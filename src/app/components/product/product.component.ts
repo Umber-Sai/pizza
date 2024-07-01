@@ -29,15 +29,15 @@ export class ProductComponent  {
   private elem!: ElementRef;
 
   constructor() { 
-    this.product = {
-      image: '',
-      title: '',
-      description: '',
-    }
+    // this.product = {
+    //   image: '',
+    //   title: '',
+    //   description: '',
+    // }
   }
 
   addProductToCart() {
-    this.addToCardEvent.emit(this.titleComponent.toUpper());
+    this.addToCardEvent.emit(this.titleComponent.title);
   }
 
 }

@@ -74,9 +74,9 @@
 
 <section class="products" #productsElement>
   <div class="container">
-      <h2 class="products-title" id="product-title">Выберите свою любимую пиццу </h2>
+      <h2 class="products-title" id="product-title">Выберите свою любимую пиццу {{lateData | async}}</h2>
       <div class="products-items">
-          <product *ngFor="let product of products; let i = index;" [product]="product" (addToCardEvent)="addToCart($event, orderElement)"></product>
+          <product *ngFor="let product of products | chickenProducts; let i = index;" [product]="product" (addToCardEvent)="addToCart($event, orderElement)"></product>
       </div>
   </div>
 </section>

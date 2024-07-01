@@ -1,4 +1,4 @@
-<div class="product" *isChicken="product.description">
+<div class="product">
     <div class="product-image" *ngIf="product.image; else defaultImageBlock">
         <img [src]="'assets/images/' + product.image" alt="product-pizza">
     </div>
@@ -10,15 +10,14 @@
     </ng-template>
     
 
-    <custom-title [title]="product.title"></custom-title>
+    <custom-title [title]="product.title | uppercase"></custom-title>
 
-    <div class="product-text">
-      {{product.description}}
-    </div>
+    <div class="product-text">{{product.description | chickenDescription | wordUpper: ['томат','сыр']}}</div>
     <div class="product-action" #elem>
         <button class="btn btn-add-to-cart" (click)="addProductToCart()" >В корзину</button>
     </div>
+    <div>{{product.datetime | date: 'full' | uppercase}}</div>
 </div>
 
 <!-- (click)="addToCart(product, order)" -->
- <!-- 30:26 -->
+ <!-- 08:23 -->
