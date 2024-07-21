@@ -17,6 +17,7 @@
         <button class="btn btn-add-to-cart" (click)="addProductToCart()" >В корзину</button>
     </div>
     <div>{{product.datetime | date: 'full' | uppercase}}</div>
+    <div>{{cartProductService.getCommonCount()}}</div>
 </div>
 
 <!-- (click)="addToCart(product, order)" -->
