@@ -30,6 +30,16 @@
     box-sizing: border-box;
 }
 
+.product-action .btn.btn-white {
+    margin-top: 10px;
+}
+
+.product-action { 
+    display: flex;;
+    flex-direction: column;
+}
+
+
 /* 1024 - 1229 */
 @media screen and (max-width: 1229px) {
     .product {

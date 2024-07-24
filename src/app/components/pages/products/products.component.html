@@ -1,0 +1,9 @@
+<section class="products" id="products" >
+    <div class="container">
+        <h2 class="products-title" id="product-title">Выберите свою любимую пиццу </h2>
+        <div class="products-items">
+            <product-card *ngFor="let product of products; let i = index;" [product]="product"
+                (addToCardEvent)="addToCart($event)"></product-card>
+        </div>
+    </div>
+</section>

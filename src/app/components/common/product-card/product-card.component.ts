@@ -4,24 +4,14 @@ import { TitleComponent } from '../title/title.component';
 import { CartProductService } from 'src/app/srvices/cart-product.service';
 
 @Component({
-  selector: 'product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
+  selector: 'product-card',
+  templateUrl: './product-card.component.html',
+  styleUrls: ['./product-card.component.scss'],
   providers: [CartProductService]
-  // encapsulation: ViewEncapsulation.None
 })
-export class ProductComponent  {
+export class ProductCardComponent  {
 
   @Input() product: ProductType = {} as ProductType;
-
-  // @Input()
-  // get product(): ProductType {return this._product; }
-  // set product(param: ProductType) {
-  //   param.title = param.title.toLocaleUpperCase();
-  //   this._product = param;
-  // }
-  // private _product: ProductType;
-
   @Output() addToCardEvent: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild(TitleComponent) 
@@ -31,11 +21,6 @@ export class ProductComponent  {
   private elem!: ElementRef;
 
   constructor( public cartProductService : CartProductService) { 
-    // this.product = {
-    //   image: '',
-    //   title: '',
-    //   description: '',
-    // }
   }
 
   addProductToCart() {

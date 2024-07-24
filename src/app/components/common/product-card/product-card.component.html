@@ -15,10 +15,8 @@
     <div class="product-text">{{product.description | chickenDescription | wordUpper: ['томат','сыр']}}</div>
     <div class="product-action" #elem>
         <button class="btn btn-add-to-cart" (click)="addProductToCart()" >В корзину</button>
+        <button class="btn btn-white" [routerLink]="['/products', product.id]" >Подробнее</button>
     </div>
-    <div>{{product.datetime | date: 'full' | uppercase}}</div>
-    <div>{{cartProductService.getCommonCount()}}</div>
 </div>
 
 <!-- (click)="addToCart(product, order)" -->
- <!-- 08:23 -->
