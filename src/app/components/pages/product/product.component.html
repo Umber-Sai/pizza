@@ -3,7 +3,7 @@
         <h2 class="products-title" id="product-title">Описание пиццы</h2>
         <div class="products-item">
             <div class="product-image" *ngIf="product.image; else defaultImageBlock">
-                <img [src]="'assets/images/' + product.image" alt="product-pizza">
+                <img [src]="product.image" alt="product-pizza">
             </div>
 
             <ng-template #defaultImageBlock>

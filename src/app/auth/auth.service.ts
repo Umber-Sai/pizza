@@ -21,6 +21,10 @@ export class AuthService {
     this.isLoggedSubject.next(this.isLogged)
   }
 
+  getTocken() {
+    return 'test'
+  }
+
   isLoggedIn(): boolean {
     return this.isLogged
   }
