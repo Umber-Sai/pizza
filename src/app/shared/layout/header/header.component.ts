@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/auth/auth.service';
-import { CartService } from 'src/app/srvices/cart.service';
+import { AuthService } from 'src/app/core/auth/auth.service';
+import { CartService } from '../../srvices/cart.service';
+
 
 @Component({
   selector: 'header-component',

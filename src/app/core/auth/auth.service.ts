@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthService {
 
   constructor() { }
 
   public isLoggedSubject: Subject<boolean> = new Subject
-  private isLogged = true;
+  private isLogged = false;
 
   logIn() {
     this.isLogged = true;

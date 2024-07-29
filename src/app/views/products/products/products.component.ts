@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, map, of, retry, tap } from 'rxjs';
-import { CartService } from 'src/app/srvices/cart.service';
-import { ProductService } from 'src/app/srvices/product.service';
-import { ProductType } from 'src/app/types/product.type';
+import { CartService } from 'src/app/shared/srvices/cart.service';
+import { ProductService } from 'src/app/shared/srvices/product.service';
+import { ProductType } from 'src/types/product.type';
 
 @Component({
   selector: 'app-products',

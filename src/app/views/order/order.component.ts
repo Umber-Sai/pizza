@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { CartService } from 'src/app/srvices/cart.service';
-import { ProductService } from 'src/app/srvices/product.service';
+import { CartService } from 'src/app/shared/srvices/cart.service';
+import { ProductService } from 'src/app/shared/srvices/product.service';
 
 @Component({
   selector: 'app-order',

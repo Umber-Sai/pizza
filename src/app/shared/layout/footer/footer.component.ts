@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/srvices/cart.service';
+import { CartService } from '../../srvices/cart.service';
+
 
 @Component({
   selector: 'footer-component',

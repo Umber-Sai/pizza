@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subject, Subscription, from, map } from 'rxjs';
-import { CartService } from 'src/app/srvices/cart.service';
+import { Subject, Subscription, map } from 'rxjs';
+import { CartService } from 'src/app/shared/srvices/cart.service';
+
 
 @Component({
   selector: 'app-main',

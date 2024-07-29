@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild, ElementRef, ViewEncapsulation, OnChanges, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy} from '@angular/core';
-import { ProductType } from 'src/app/types/product.type';
+import { ProductType } from 'src/types/product.type';
 import { TitleComponent } from '../title/title.component';
-import { CartProductService } from 'src/app/srvices/cart-product.service';
+import { CartProductService } from '../../srvices/cart-product.service';
+
 
 @Component({
   selector: 'product-card',
