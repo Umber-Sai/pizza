@@ -9,6 +9,10 @@ import { SharedModule } from './shared/shared.module';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { LayoutComponent } from './views/layout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -16,7 +20,7 @@ import { LayoutComponent } from './views/layout.component';
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,10 @@ import { LayoutComponent } from './views/layout.component';
     CoreModule,
     SharedModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ export class OrderComponent implements OnInit, OnDestroy{
   public formValues = {
     productTitle : '',
     address: '',
-    phone: ''
+    phone: '',
   }
 
   private subscription : Subscription | null = null
@@ -64,7 +64,7 @@ export class OrderComponent implements OnInit, OnDestroy{
           this.formValues = {
             productTitle: '',
             address: '',
-            phone: ''
+            phone: '',
           }
         } else {
           alert('Ошибка');

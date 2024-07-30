@@ -1,6 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject, Subscription, map } from 'rxjs';
+import { PopupComponent } from 'src/app/shared/components/popup/popup.component';
 import { CartService } from 'src/app/shared/srvices/cart.service';
+
 
 
 @Component({
@@ -8,9 +12,8 @@ import { CartService } from 'src/app/shared/srvices/cart.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit, OnDestroy {
+export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  // private observable : Observable<number>;
   private subscription: Subscription | null = null;
   private subject : Subject<number>;
 
@@ -24,32 +27,9 @@ export class MainComponent implements OnInit, OnDestroy {
       const timeout1 = setTimeout(() => {
         this.subject.complete();
       }, 4000)
-     
-
-
-    // this.observable = from([1,2,3,4,5]);
-
-    // this.observable = new Observable((observer) => {
-    //   let count = 0;
-    //   const interval = setInterval(() => {
-    //     observer.next(count++);
-    //   }, 1000);
-    //   const timeout1 = setTimeout(() => {
-    //     observer.complete();
-    //   }, 4000)
-    //   const timeout2 = setTimeout(() => {
-    //     observer.error('world');
-    //   }, 5000);
-
-    //   return {
-    //     unsubscribe() {
-    //       clearInterval(interval);
-    //       clearTimeout(timeout1);
-    //       clearTimeout(timeout2);
-    //     }
-    //   }
-    // });
   }
+
+  // @ViewChild('popup') popup!: TemplateRef<ElementRef>;
 
   ngOnInit(): void {
     this.subscription = this.subject
@@ -70,6 +50,9 @@ export class MainComponent implements OnInit, OnDestroy {
       })
   }
 
+
+
+
   test() {
     this.subject
     .pipe(
@@ -80,6 +63,14 @@ export class MainComponent implements OnInit, OnDestroy {
     .subscribe((param: string) => {
       console.log('subscriber2 ' + param);
     })
+  }
+
+  @ViewChild(PopupComponent)
+  private popup!: PopupComponent;
+
+
+  ngAfterViewInit(): void {
+    this.popup.open()
   }
 
   ngOnDestroy(): void {

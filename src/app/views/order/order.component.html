@@ -11,11 +11,16 @@
             </div>
         </div>
         <div class="order-form">
+
             <input type="text" class="order-input" coolInput id="product-input" [coolInputDefaultBgColor]="'red'"
-                [coolInputFocusBgColor]="'blue'" placeholder="Пицца" [(ngModel)]="formValues.productTitle">
-            <input type="text" class="order-input" id="address-input" placeholder="Адрес доставки"
-                [(ngModel)]="formValues.address">
-            <input type="text" class="order-input" coolInput id="phone-input" placeholder="Телефон"
+                pInputText [coolInputFocusBgColor]="'blue'" placeholder="" [(ngModel)]="formValues.productTitle">
+
+            <span class="p-float-label">
+                <input type="text" class="" id="address-input" placeholder="Адрес доставки" pInputText
+                    [(ngModel)]="formValues.address">
+                <label for="address-input">Адрес доставки</label>
+            </span>
+            <input type="text" class="order-input" coolInput id="phone-input" placeholder="Телефон" pInputText
                 [(ngModel)]="formValues.phone">
             <button class="btn" (click)="createOrder()">Оформить заказ</button>
         </div>
