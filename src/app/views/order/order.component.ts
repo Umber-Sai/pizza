@@ -28,7 +28,6 @@ export class OrderComponent implements OnInit, OnDestroy{
     // if(this.cartService.product) this.formValues.productTitle = this.cartService.product
     this.subscription = this.activatedRoute.queryParams.subscribe((params) => {
       if(params['product']) {
-        console.log(params['product']);
         this.formValues.productTitle = params['product'];
       }
     });
